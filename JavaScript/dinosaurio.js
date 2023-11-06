@@ -1,3 +1,5 @@
+let SPACE = 32;
+
 class Player {
     constructor(x, y, dinoQuieto,/* dinoMovil,*/speed, grav) {
         this.x = x;
@@ -8,7 +10,17 @@ class Player {
         this.grav = grav;
     }
 
+    jump() {
+        this.y -= 20;
+    }
+
+    keyPressed() {
+
+    }
+
     update(){
+
+
 
     }
     
