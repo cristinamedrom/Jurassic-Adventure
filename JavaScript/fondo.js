@@ -11,7 +11,7 @@ class Suelo {
     }
 
     draw() {
-        Image(cesped, this.x, this.y);
+        image(cesped, this.x, this.y);
     }
 
 }
