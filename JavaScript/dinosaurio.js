@@ -47,6 +47,7 @@ class Player {
 function keyPressed() {
     if (keyCode === ENTER) {
         enterPressed = true;
+        startRoca = true;
     }
 
     if (keyCode === SPACE) {
