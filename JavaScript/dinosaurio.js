@@ -8,7 +8,7 @@ class Player {
         /*this.dinoMovil = dinoMovil;*/
         this.speed = speed;
         this.grav = grav;
-        this.velocity = 0;
+        this.velocity = 50;
         this.jumpHeight = -30;
     }
 
@@ -16,6 +16,11 @@ class Player {
         if (this.y === 150) {
             this.velocity = this.jumpHeight;
             jumping = true;
+        }
+
+        if (this.y >= 150) {
+            this.y = 150;
+            jumping = false;
         }
     }
 

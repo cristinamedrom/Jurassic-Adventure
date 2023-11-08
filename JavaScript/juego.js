@@ -19,7 +19,7 @@ function preload(){
 
 function setup() {
     
-    dino = new Player(168, 150, dinoQuieto, dinoMovil, 5, -50);
+    dino = new Player(168, 150, dinoQuieto, dinoMovil, 5, 3);
     rocaAlta = new RocaPrim(384, 164, rocaPrimen, 0.7, 0)
     suelo = new Suelo(0, 184, cesped, 50);
     
@@ -35,14 +35,17 @@ function draw() {
     dino.draw();
     rocaAlta.draw();
     rocaAlta.update();
+    if (rocaAlta.multpRoca) {
+        rocaAlta = new RocaPrim(384, 164, rocaPrimen, 0.7, 0);
+        rocaAlta.multpRoca = false;
+    }
 
 }
 
 function keyPressed() {
 
-    if (keyCode === SPACE && !jumping) {
-
+    if (keyCode === SPACE) {
         dino.jump();
-
     }
+
 }

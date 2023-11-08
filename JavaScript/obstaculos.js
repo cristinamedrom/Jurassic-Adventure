@@ -5,11 +5,22 @@ class RocaPrim {
         this.rocaPrimen = rocaPrimen;
         this.speed = speed;
         this.grav = grav;
+        this.multpRoca = false;
+    }
+
+    nuevaRoca() {
+        this.x = random(100, 84);
+        this.y = 164;
+        this.multRoca = false;
     }
 
     update() {
 
         this.x -= this.speed;
+
+        if (this.x <= -this.rocaPrimen.width) {
+            this.multpRoca = true;
+        }
 
     }
 
