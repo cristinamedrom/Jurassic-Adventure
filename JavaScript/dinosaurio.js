@@ -8,23 +8,31 @@ class Player {
         /*this.dinoMovil = dinoMovil;*/
         this.speed = speed;
         this.grav = grav;
+        this.velocity = 50;
+        this.jumpHeight = -30;
     }
 
     jump() {
-        this.y -= 20;
-    }
-
-    keyPressed() {
-
+        if (this.y === 150) {
+            this.velocity = this.jumpHeight;
+            jumping = true;
+        }
     }
 
     update(){
 
+        this.y += this.velocity;
+        this.velocity += this.grav;
 
-
+        if (this.y >= 150) {
+            this.y = 150;
+            jumping = false;
+        }
     }
     
     draw() {
+
         image( this.dinoQuieto, this.x, this.y);
+
     }
 }
