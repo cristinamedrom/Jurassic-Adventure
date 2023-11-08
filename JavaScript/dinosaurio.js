@@ -1,11 +1,13 @@
 let SPACE = 32;
+let ENTER = 13;
+let enterPressed = false;
 
 class Player {
-    constructor(x, y, dinoQuieto,/* dinoMovil,*/speed, grav) {
+    constructor(x, y, dinoQuieto, dinoMovil, speed, grav) {
         this.x = x;
         this.y = y;
         this.dinoQuieto = dinoQuieto;
-        /*this.dinoMovil = dinoMovil;*/
+        this.dinoMovil = dinoMovil;
         this.speed = speed;
         this.grav = grav;
         this.velocity = 50;
@@ -37,7 +39,17 @@ class Player {
     
     draw() {
 
-        image( this.dinoQuieto, this.x, this.y);
+        image(enterPressed ? this.dinoMovil : this.dinoQuieto, this.x, this.y);
 
+    }
+}
+
+function keyPressed() {
+    if (keyCode === ENTER) {
+        enterPressed = true;
+    }
+
+    if (keyCode === SPACE) {
+        dino.jump();
     }
 }
