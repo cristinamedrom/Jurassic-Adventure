@@ -8,7 +8,7 @@ class Player {
         /*this.dinoMovil = dinoMovil;*/
         this.speed = speed;
         this.grav = grav;
-        this.velocity = 50;
+        this.velocity = 0;
         this.jumpHeight = -30;
     }
 
