@@ -31,6 +31,7 @@ function draw() {
 
     background(fondo);
     suelo.draw();
+    suelo.update();
     dino.update();
     dino.draw();
     rocaAlta.draw();

@@ -7,6 +7,7 @@ class Suelo {
         this.cesped = cesped;
         this.speed = speed;
         this.repeat = false;
+        this.xOriginal = x;
     }
 
     update() {
@@ -15,14 +16,20 @@ class Suelo {
             this.x -= this.speed;
         }
 
-        if (this.x <= this.cesped.width) {
-            this.x = 320;
+        if (this.x <= -256) {
+            this.x = this.xOriginal;
+            this.repeat = true;
         }
 
     }
 
     draw() {
         image(cesped, this.x, this.y);
+
+        if (this.repeat) {
+            image(this.cesped, this.x + this.cesped.width, this.y);
+            this.repeat = false;
+        }
     }
 
 }
