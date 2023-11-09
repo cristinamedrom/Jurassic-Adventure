@@ -48,6 +48,7 @@ function keyPressed() {
     if (keyCode === ENTER) {
         enterPressed = true;
         startRoca = true;
+        startSuelo = true;
     }
 
     if (keyCode === SPACE) {

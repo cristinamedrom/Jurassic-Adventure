@@ -21,7 +21,7 @@ function setup() {
     
     dino = new Player(168, 150, dinoQuieto, dinoMovil, 5, 3);
     rocaAlta = new RocaPrim(384, 164, rocaPrimen, 0.7, 0)
-    suelo = new Suelo(0, 184, cesped, 50);
+    suelo = new Suelo(0, 184, cesped, 0.7);
     
     createCanvas(384, 216);
 
