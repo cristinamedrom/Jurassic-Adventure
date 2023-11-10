@@ -12,11 +12,43 @@
 </head>
 
 <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-    <script src="/JavaScript/juego.js"></script>
-    <script src="/JavaScript/dinosaurio.js"></script>
-    <script src="/JavaScript/obstaculos.js"></script>
-    <script src="/JavaScript/fondo.js"></script>
+    <div onload="abrirVentanaEmergente()">
+        <div id="ventanaEmergente" class="ventana-emergente">
+            <div class="contenidoEmergente">
+                <span class="cerrar" onclick="cerrarVentana()">&times;</span>
+                <h2>Instrucciones del Juego</h2>
+                <br>
+                <p class="instGame">En Jurassic Adventure tendrás que ayudar a Dino a superar las adversidades de la
+                    selva pulsando
+                    "espacio"
+                    cuando quieras que salte.
+                    Para comenzar tu aventura, solo tendrás que pulsar "Enter".
+                </p>
+                <br>
+                <br>
+                <div class="creditos">
+                    <p>Recursos:</p>
+                    <p><a href="https://arks.itch.io/dino-characters" target="_blank">Dinosaurio</a></p>
+                    <p><a href="https://jesse-m.itch.io/jungle-pack" target="_blank">Background</a></p>
+                    <p><a href="https://place000000.itch.io/rocks-with-plants" target="_blank">Obstáculos</a></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="jueguito">
+        <h1>Jurassic Adventure</h1>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+        <script src="/JavaScript/pagina.js"></script>
+        <script src="/JavaScript/juego.js"></script>
+        <script src="/JavaScript/dinosaurio.js"></script>
+        <script src="/JavaScript/obstaculos.js"></script>
+        <script src="/JavaScript/fondo.js"></script>
+        <button id="tryAgain">¡Intentalo de nuevo!</button>
+    </div>
+
+
 </body>
 
 </html>

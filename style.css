@@ -1,0 +1,91 @@
+html {
+    background-color: #AEDECB;
+}
+
+h1 {
+    font-family: Bungee;
+    color: #008E34;
+}
+
+h2 {
+    font-family: Bungee;
+    color: #AEDECB;
+}
+
+.instGame {
+    font-family: "Press Start 2P";
+    font-size: 15px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.creditos {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    font-family: "Press Start 2P";
+    font-size: 12px;
+    color: whitesmoke;
+}
+
+a:hover {
+    color: #AEDECB;
+}
+
+a:visited, a:link {
+    color: #d8ffef;
+    text-decoration:none;
+}
+
+
+
+.ventana-emergente {
+    background: #31655F;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(33, 41, 52, .75);
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 70vh;
+    max-width: 700px;
+    min-width: 500px;
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.3rem;
+    text-align: left;
+    line-height: 25px;
+    text-shadow: 0 3px 3px rgba(33, 41, 52, .75);
+}
+
+.jueguito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cerrar:hover {
+    cursor: pointer;
+}
+
+#tryAgain {
+    font-family: "Press Start 2P";
+    font-style: bold;
+    font-size: 15px;
+    height: 25px;
+    color: #008E34;
+    background-color: whitesmoke;
+    border-radius: 3px;
+    border: 1px solid #31655F;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+#tryAgain:hover {
+    color: whitesmoke;
+    background-color: #008E34;
+    border-radius: 3px;
+    border: 1px solid #31655F;
+}
