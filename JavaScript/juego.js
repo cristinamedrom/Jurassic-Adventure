@@ -19,7 +19,7 @@ function preload(){
 
 function setup() {
     
-    dino = new Player(168, 150, dinoQuieto, dinoMovil, 5, 3);
+    dino = new Player(168, 150, dinoQuieto, dinoMovil, 0.01, 0.1);
     rocaAlta = new RocaPrim(384, 164, rocaPrimen, 0.7, 0)
     suelo = new Suelo(0, 184, cesped, 0.7);
     
@@ -40,6 +40,7 @@ function draw() {
         rocaAlta = new RocaPrim(384, 164, rocaPrimen, 0.7, 0);
         rocaAlta.multpRoca = false;
     }
+    rocaAlta.choqueColosal(dino);
 
 }
 
