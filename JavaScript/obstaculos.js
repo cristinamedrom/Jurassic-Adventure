@@ -30,21 +30,27 @@ class RocaPrim {
     choqueColosal() {
 // dimensiones de Dino
         let dinoIzq = dino.x;
-        let dinoDcha = dino.x + dino.dinoMovil.width;
+        let dinoDcha = dino.x + dino.dinoMovil.width - 10;
         let dinoAlto = dino.y;
-        let dinoBajo = dino.y + dino.dinoMovil.height;
+        let dinoBajo = dino.y + dino.dinoMovil.height -10;
 
 // dimensiones de RocaAlta
         let rocaIzq = this.x;
-        let rocaDcha = this.x + this.rocaPrimen.width;
+        let rocaDcha = this.x + this.rocaPrimen.width - 10;
         let rocaAlto = this.y;
-        let rocaBajo = this.y + this.rocaPrimen.height;
+        let rocaBajo = this.y + this.rocaPrimen.height - 10;
 
         if(dinoIzq < rocaDcha && dinoDcha > rocaIzq && dinoAlto < rocaBajo && dinoBajo > rocaAlto) {
             enterPressed = false;
             startRoca = false;
             startSuelo = false;
         }
+    }
+
+    aumentarSpeed() {
+
+        setInterval((this.speed *= 1.001), 1000)
+
     }
 
 }
@@ -78,21 +84,27 @@ class RocaSegunda {
     choqueColosal2() {
 // dimensiones de Dino
         let dinoIzq = dino.x;
-        let dinoDcha = dino.x + dino.dinoMovil.width;
+        let dinoDcha = dino.x + dino.dinoMovil.width - 10;
         let dinoAlto = dino.y;
-        let dinoBajo = dino.y + dino.dinoMovil.height;
+        let dinoBajo = dino.y + dino.dinoMovil.height - 10;
 
 // dimensiones de RocaBaja
         let rocaIzq2 = this.x;
-        let rocaDcha2 = this.x + this.rocaSegun.width;
+        let rocaDcha2 = this.x + this.rocaSegun.width - 10;
         let rocaAlto2 = this.y;
-        let rocaBajo2 = this.y + this.rocaSegun.height;
+        let rocaBajo2 = this.y + this.rocaSegun.height - 10;
 
         if(dinoIzq < rocaDcha2 && dinoDcha > rocaIzq2 && dinoAlto < rocaBajo2 && dinoBajo > rocaAlto2) {
             enterPressed = false;
             startRoca = false;
             startSuelo = false;
         }
+    }
+
+    aumentarSpeed() {
+
+        setInterval((this.speed *= 1.001), 1000)
+
     }
 }
 
@@ -125,20 +137,26 @@ class Pajarito {
     choqueColosal3() {
 // dimensiones de Dino
         let dinoIzq = dino.x;
-        let dinoDcha = dino.x + dino.dinoMovil.width;
+        let dinoDcha = dino.x + dino.dinoMovil.width - 10;
         let dinoAlto = dino.y;
-        let dinoBajo = dino.y + dino.dinoMovil.height;
+        let dinoBajo = dino.y + dino.dinoMovil.height - 10;
 
 // dimensiones de Pajarito
         let pajaritoIzq = this.x;
-        let pajaritoDcha = this.x + this.pajaroImg.width;
+        let pajaritoDcha = this.x + this.pajaroImg.width - 10;
         let pajaritoAlto = this.y;
-        let pajaritoBajo = this.y + this.pajaroImg.height;
+        let pajaritoBajo = this.y + this.pajaroImg.height - 10;
 
         if(dinoIzq < pajaritoDcha && dinoDcha > pajaritoIzq && dinoAlto < pajaritoBajo && dinoBajo > pajaritoAlto) {
             enterPressed = false;
             startRoca = false;
             startSuelo = false;
         }
+    }
+
+    aumentarSpeed() {
+
+        setInterval((this.speed *= 1.001), 1000)
+
     }
 }
