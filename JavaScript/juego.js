@@ -6,6 +6,7 @@ let cesped;
 let suelo;
 let jumping = false;
 let rocaPrimen;
+let rocaSegun;
 
 function preload(){
 
@@ -13,14 +14,16 @@ function preload(){
     cesped = loadImage('./img/cesped.png')
     dinoQuieto = loadImage('./img/estatico.gif');
     dinoMovil = loadImage('./img/caminar.gif');
-    rocaPrimen = loadImage('./img/roca-primera.png')
+    rocaPrimen = loadImage('./img/roca-primera.png');
+    rocaSegun = loadImage('./img/roca-seg.png')
 
 }
 
 function setup() {
     
     dino = new Player(168, 150, dinoQuieto, dinoMovil, 0.01, 0.1);
-    rocaAlta = new RocaPrim(384, 164, rocaPrimen, 0.7, 0)
+    rocaAlta = new RocaPrim(384, 164, rocaPrimen, 0.7, 0);
+    rocaBaja = new RocaSegunda(512, 177, rocaSegun, 0.7, 0);
     suelo = new Suelo(0, 184, cesped, 0.7);
     
     createCanvas(384, 216);
@@ -41,6 +44,13 @@ function draw() {
         rocaAlta.multpRoca = false;
     }
     rocaAlta.choqueColosal(dino);
+    rocaBaja.draw();
+    rocaBaja.update();
+    if (rocaBaja.multpRoca2) {
+        rocaBaja = new RocaSegunda(512, 164, rocaSegun, 0.7, 0);
+        rocaBaja.multpRoca2 = false;
+    }
+    rocaBaja.choqueColosal2(dino);
 
 }
 
