@@ -86,8 +86,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     setInterval(function () {
-        if (startRoca) {
-            iniciarTemporizador();
+        if (startSuelo) {
+            if (!temporizadorInterval) {
+                iniciarTemporizador();
+            }
         } else {
             detenerTemporizador();
         }
