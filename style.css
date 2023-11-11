@@ -37,7 +37,11 @@ a:visited, a:link {
     text-decoration:none;
 }
 
-
+#temporizador {
+    color:#008E34;
+    font-family: "Press Start 2P";
+    font-size: 15px;
+}
 
 .ventana-emergente {
     background: #31655F;

@@ -10,7 +10,7 @@ class Player {
         this.dinoMovil = dinoMovil;
         this.speed = speed;
         this.grav = grav;
-        this.jumpHeight = -12;
+        this.jumpHeight = -17;
     }
 
     jump() {

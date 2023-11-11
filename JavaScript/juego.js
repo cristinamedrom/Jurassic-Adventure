@@ -8,6 +8,8 @@ let jumping = false;
 let rocaPrimen;
 let rocaSegun;
 let pajaroImg;
+let tiempo = 0;
+let temporizadorInterval;
 
 function preload(){
 
@@ -67,5 +69,28 @@ function draw() {
 
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    function actualizarTemporizador() {
+        document.getElementById('tiempo').innerText = tiempo;
+    }
 
+    function iniciarTemporizador() {
+        temporizadorInterval = setInterval(function () {
+            tiempo++;
+            actualizarTemporizador();
+        }, 1000);
+    }
+
+    function detenerTemporizador() {
+        clearInterval(temporizadorInterval);
+    }
+
+    setInterval(function () {
+        if (startRoca) {
+            iniciarTemporizador();
+        } else {
+            detenerTemporizador();
+        }
+    }, 1000);
+});
 
