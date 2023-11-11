@@ -49,7 +49,7 @@ class RocaPrim {
 
     aumentarSpeed() {
 
-        setInterval((this.speed *= 1.001), 1000)
+        setInterval((this.speed *= 1.001), 3000)
 
     }
 
@@ -103,7 +103,7 @@ class RocaSegunda {
 
     aumentarSpeed() {
 
-        setInterval((this.speed *= 1.001), 1000)
+        setInterval((this.speed *= 1.001), 3000)
 
     }
 }
@@ -156,7 +156,7 @@ class Pajarito {
 
     aumentarSpeed() {
 
-        setInterval((this.speed *= 1.001), 1000)
+        setInterval((this.speed *= 1.001), 3000)
 
     }
 }
